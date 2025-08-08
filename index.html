@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<style>
+  body {
+    background: black;
+    color: #0f0;
+    font-family: monospace;
+    text-align: center;
+    padding: 2em;
+    user-select: none;
+  }
+  h1 {
+    text-shadow: 0 0 5px #0f0;
+    font-size: 3em;
+    margin-bottom: 0.2em;
+  }
+  p {
+    font-size: 1.2em;
+    margin-top: 0;
+  }
+  input, button {
+    font-family: monospace;
+    font-size: 1.4em;
+    background: black;
+    border: 2px solid #0f0;
+    color: #0f0;
+    padding: 0.5em 1em;
+    margin: 1em 0;
+    border-radius: 0;
+  }
+  input:focus, button:hover {
+    background: #030;
+    outline: none;
+    cursor: pointer;
+  }
+  button {
+    border-color: #0c0;
+  }
+  #f {
+    margin-top: 1em;
+    color: #f30;
+    font-weight: bold;
+    text-shadow: 0 0 3px #f30;
+  }
+  #v {
+    margin-top: 2em;
+  }
+  img {
+    border: 2px solid #0f0;
+    box-shadow: 0 0 10px #0f0;
+  }
+</style>
+</head>
+<body>
+
+<h1>WARNING!</h1>
+<p>Enter the encrypted key to unlock system to proceed:</p>
+
+<input id="i" type="text" placeholder="Enter code" autocomplete="off" />
+<button onclick="S()">Send</button>
+
+<div id="f"></div>
+<div id="v"></div>
+
+<script>
+  (function(){
+    var _0x5f2a=["aHR0cHM=","Oi8v","a3V1a2l0ZW5zaGk=","Lg==","Z2l0aHVi","Lmlv","L2lmLXlvdS1hc2std2h5Lw=="];
+    function _0x3621(_0x113a){return atob(_0x113a);}
+    function _0x4b9c(_0x1b47){return btoa(_0x1b47);}
+    function _0x2294(_0x4119){
+      var _0x2f0c="";
+      for(var _0x1ef7=0;_0x1ef7<_0x4119.length;_0x1ef7++){
+        var _0x324a=_0x4119[_0x1ef7];
+        _0x324a=_0x3621(_0x324a);
+        _0x2f0c+=_0x324a;
+      }
+      return _0x2f0c;
+    }
+    function _0x7d8a(_0x1d41){
+      var _0x4d4d=0x0;
+      for(var _0x58a0=0;_0x58a0<_0x1d41.length;_0x58a0++){
+        _0x4d4d+=_0x1d41.charCodeAt(_0x58a0);
+      }
+      return _0x4d4d;
+    }
+    window["S"]=function(){
+      var _0x2a3c=document.getElementById("i").value.trim().toLowerCase();
+      var _0x4381=document.getElementById("f");
+      var _0x1d9b=document.getElementById("v");
+      var _0x4c7b=_0x4b9c(_0x2a3c);
+      if(_0x4c7b==="dSBhcmUgZ2V0dGluZyBjbG9zZXI="){
+        _0x4381.textContent="";
+        var _0x3e89=_0x2294(_0x5f2a);
+        var _0x1e33=_0x7d8a(_0x3e89);
+        _0x1d9b.innerHTML='<p>Encryption broken. Follow the signal to proceed.</p><img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data='+encodeURIComponent(_0x3e89)+'"/>';
+      }else{
+        _0x4381.textContent="Nop :) Try to be better next time!";
+        _0x1d9b.innerHTML="";
+      }
+    }
+  })();
+</script>
+
+</body>
+</html>
